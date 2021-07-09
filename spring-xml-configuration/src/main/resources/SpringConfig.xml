@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="library" class="com.test.xml.configuration.Library">
+		<property name="book" ref="book"></property>
+	</bean>
+
+	<bean id="book" class="com.test.xml.configuration.Book">
+		<property name="title" value="Spring XML Configuration"></property>
+		<property name="publication" value="Dev. SP Publication"></property>
+		<property name="author" value="Suraj"></property>
+	</bean>
+</beans>
