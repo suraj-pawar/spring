@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student" class="com.java.example.Student">
+
+		<!-- Here we use property tag for setting id property -->
+		<property name="id">
+			<value>10</value>
+		</property>
+
+		<!-- Here we used constructor tag, so whenever we get student bean instance 
+			the default value is set here -->
+		<constructor-arg>
+			<value>1</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>"Suraj"</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>80.00</value>
+		</constructor-arg>
+	</bean>
+
+</beans>
