@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="bike" class="com.java.example.VehicleFactoryBean">
+		<property name="vehicle">
+			<bean class="com.java.example.Bike">
+				<constructor-arg value="Kawasaki"></constructor-arg>
+				<constructor-arg value="Green"></constructor-arg>
+				<property name="tyres" value="2"></property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="car" class="com.java.example.VehicleFactoryBean">
+		<property name="vehicle">
+			<bean class="com.java.example.Car">
+				<constructor-arg value="Mercedez"></constructor-arg>
+				<constructor-arg value="Black"></constructor-arg>
+				<property name="tyres" value="4"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>
